@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ff000000"
+    android:id="@+id/linearlay">
+    
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff00" 
+        >
+<Button android:text="+" 
+        android:layout_width="wrap_content" 
+        android:id="@+id/AddButton" 
+        android:layout_height="wrap_content" 
+        android:layout_alignParentTop="true" 
+       
+        android:layout_marginLeft="10dp" 
+        
+        android:width="10dp"
+        android:height="1dp"
+        
+        >
+        </Button>
+
+<Button android:text="-" 
+        android:layout_width="wrap_content" 
+        android:id="@+id/DeleteButton" 
+        android:layout_height="wrap_content" 
+        android:layout_alignParentTop="true" 
+       
+        android:layout_marginLeft="180dp" 
+        
+        android:width="10dp"
+        android:height="1dp"
+        
+        >
+        </Button>
+
+       
+    </LinearLayout>
+    
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+       <TextView
+         
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:background="@drawable/firstshape" 
+         android:textColor="#ffffffff"
+         android:padding="5dip"
+         android:layout_margin="3dip"
+         android:layout_weight="1"
+         android:text="ITEM" 
+         android:gravity="center"
+         android:textSize="14sp"/>
+          
+      <!-- Column 2 -->
+      <TextView
+        
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:textColor="#ffffffff"
+         
+         android:background="@drawable/firstshape" 
+         android:padding="5dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="Current Wt." 
+         android:gravity="center"
+         />
+          
+      <!-- Column 3 -->
+      <TextView
+       
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="5dip"
+          android:textColor="#ffffffff"
+          android:background="@drawable/firstshape"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="Consumed"
+		 android:gravity="center"		 />
+    </LinearLayout>
+    
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal" >
+
+         <!-- Column 1 -->
+
+         <TextView
+             
+                      android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:background="#ff000000"
+         android:textColor="#ffffffff"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:gravity="center"
+         android:text="Rice"
+          />
+
+         <!-- Column 2 -->
+
+         <TextView
+             android:id="@+id/RiceValue"
+            
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+          android:textColor="#ffffffff"
+         
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="1000gm" 
+         android:gravity="center"/>
+             
+
+         <!-- Column 3 -->
+
+         <TextView
+             android:id="@+id/Rice_diff"
+             
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+          android:textColor="#ff00ff00"
+         android:padding="5dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="0" 
+         android:gravity="center"
+         android:paddingTop="8dp"
+         
+         android:width="10dp"
+         android:layout_marginTop="10dp"
+
+         
+         />
+
+
+         
+     </LinearLayout>
+                                 
+     
+     
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+      <!-- Column 1 -->
+      <TextView
+         
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:background="#ff000000"
+         android:textColor="#ffffffff"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:gravity="center"
+         android:text="Sugar"
+         />
+          
+      <!-- Column 2 -->
+      <TextView
+         android:id="@+id/SugarValue"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+          android:textColor="#ffffffff"
+         
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="1000gm" 
+         android:gravity="center"/>
+          
+      <!-- Column 3 -->
+      <TextView
+         android:id="@+id/Sugar_diff"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+          android:textColor="#ff00ff00"
+         android:padding="5dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="0" 
+         android:gravity="center"
+         
+         
+         />
+    </LinearLayout>
+    
+                                                         
+	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+      <!-- Column 1 -->
+      <TextView
+         
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:background="#ff000000"
+         android:textColor="#ffffffff"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:gravity="center"
+         android:text="Wheat"/>
+          
+      <!-- Column 2 -->
+      <TextView
+         android:id="@+id/WheatValue"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+          android:textColor="#ffffffff"
+         
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="1000gm"
+         
+         android:gravity="center"/>
+          
+     <!-- Column 3 -->
+      <TextView
+         android:id="@+id/Wheat_diff"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+          
+         android:padding="5dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="0"
+         android:gravity="center" 
+         android:textColor="#ff00ff00"
+         />
+    </LinearLayout>
+
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/Refresh_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.0"
+            android:text="Refresh"
+            android:width="10dp"
+        android:height="1dp" 
+        android:layout_marginLeft="110dp"
+         android:layout_marginRight="110dp"/>
+
+       
+    </LinearLayout>
+
+
+ <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal" >
+
+
+
+         <Button
+             
+             
+         android:text="+" 
+        android:layout_width="wrap_content" 
+         
+        android:layout_height="wrap_content" 
+        android:layout_alignParentTop="true" 
+       
+         android:layout_marginLeft="100dp" 
+        
+        android:width="10dp"
+        android:height="1dp"
+         
+         />
+
+          <Button android:text="1000gm" 
+        android:layout_width="wrap_content" 
+         
+        android:layout_height="wrap_content" 
+        android:layout_alignParentTop="true" 
+       android:layout_marginLeft="10dp" 
+        android:textColor="#ffffffff"
+        
+        android:width="10dp"
+        android:height="1dp"
+        android:textSize="14dp"
+        android:background="@drawable/button_custom"
+        >
+        </Button>
+         
+          
+          <Button
+    
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    
+    
+    android:layout_marginLeft="-5dip"
+    android:layout_marginRight="-5dip"
+    android:layout_marginTop="-15dip"
+    android:layout_marginBottom="-5dip"
+    
+    
+    android:text="BACK" />
+     </LinearLayout>
+
+</LinearLayout>
