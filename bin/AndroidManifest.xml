@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.iotapptest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="21" />
+	<!-- Permissions -->
+    <permission
+        android:name="com.example.iotapptest.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />    
+    <uses-permission android:name="android.permission.WAKE_LOCK" />    
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />    
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />    
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.example.iotapptest.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.example.iotapptest.BlueListApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/smartcity"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Mqtt Service -->
+        <service android:name="org.eclipse.paho.android.service.MqttService" >
+        </service>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Push Settings Start -->
+            <!-- Notification Intent -->
+            <intent-filter> 
+         	   <action android:name="com.example.iotapptest.IBMPushNotification" />
+
+               <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- Push Settings End -->
+        </activity>
+         
+        <activity
+            android:name=".ItemAnalysisActivity"
+            android:label="@string/title_activity_item_analysis"
+            android:parentActivityName="android.app.ListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.app.ListActivity" />
+        </activity>
+        
+        <!-- Push Settings Start -->
+		<!-- Add GCM Intent Service and intent-filters for RECEIVE and REGISTRATION of notifications -->
+		<activity android:name="com.ibm.mobile.services.push.IBMUIActivity" />
+		<service android:name="com.ibm.mobile.services.push.IBMPushIntentService" /> 
+        
+		<receiver android:name="com.ibm.mobile.services.push.IBMPushBroadcastReceiver"
+ 			android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" /> 
+				<category android:name="com.ibm.mbaas.push.sdk.client.android.sample" /> 
+			</intent-filter>
+
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.REGISTRATION" /> 
+				<category android:name="com.ibm.mbaas.push.sdk.client.android.sample" /> 
+			</intent-filter>
+		</receiver>
+		<!-- Push Settings End -->        
+        
+    </application>
+
+</manifest>
